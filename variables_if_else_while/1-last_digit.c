@@ -3,16 +3,27 @@
 #include <time.h>
 /**
  * main - Entry point
- * Description: 'the program's description'
+ * Description : Print the last digit of n, and print string accordingly to the result
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-  int n, y;
-
+	int n;
 	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	y = n % 10;
-	printf("Last digit of %d is and %d is less than %d and not %d\n", n, y);
+	n = rand() - RAND_MAX / 2;	
+	int lastDigit = n % 10;
+	printf("Last digit of %d is %d ", n, lastDigit);
+	if (lastDigit > 5) 
+	{
+	printf("and is greater than 5\n");
+	}
+	else if (lastDigit == 0)
+	{
+	printf("and is 0\n");
+	}
+	else
+	{
+	printf("and is less than 6 and not 0\n");
+	}
 	return (0);
 }
