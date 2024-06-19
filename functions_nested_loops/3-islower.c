@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * print_alphabet_x10 - Entry point
+ * _islower  - Entry point
+ * @c: variable int
  * Description : printf alphabet in lower case using only putchar
  * Return: Alway 0 (Success)
  */
@@ -8,11 +9,10 @@ int _islower(int c)
 {
 if (c >= 'a' && c <= 'z')
 {
-_islower(1 + '0');
+return (1);
 }
 else
 {
-_islower(0 + '0');
-}
 return (0);
+}
 }
