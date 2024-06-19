@@ -1,0 +1,25 @@
+#include "main.h"
+/**
+ * _islower  - Entry point
+ * @c: variable int
+ * Description : printf alphabet in lower case using only putchar
+ * Return: Alway 0 (Success)
+ */
+int print_sign(int n)
+{
+if (n > 0)
+{
+return (1);
+_putchar('+');
+}
+else if(n == 0)
+{
+return (1);
+_putchar('0');
+}
+else
+{
+return (-1);
+_putchar('-');
+}
+}
