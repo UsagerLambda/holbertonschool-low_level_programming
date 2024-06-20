@@ -17,7 +17,6 @@ else if (n < 0)
 {
 a = (n % 10) * -1;
 _putchar(a + '0');
-return (a);
 }
-return (0);
+return (a);
 }
