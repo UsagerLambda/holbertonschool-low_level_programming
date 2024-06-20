@@ -20,7 +20,7 @@ for (mn2 = 0; mn2 <= 9; mn2++)
 {
 _putchar(hr1 + '0');
 _putchar(hr2 + '0');
-_putchar(58);
+_putchar(':');
 _putchar(mn1 + '0');
 _putchar(mn2 + '0');
 _putchar('\n');
