@@ -1,15 +1,16 @@
 #include "main.h"
 /**
  * _abs  - Entry point
- * @int: integer
+ * @n: integer
  * Description : printf alphabet in lower case using only putchar
  * Return: Alway 0 (Success)
  */
-int _abs(int)
+int _abs(int n)
 {
-int n = 1;
 if (n < 0)
-_putchar(n);
+{
+return (n * -1);
+}
 else
 _putchar(n);
 return (0);
