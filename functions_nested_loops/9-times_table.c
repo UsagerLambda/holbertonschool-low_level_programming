@@ -16,7 +16,11 @@ for (lgn = 0; lgn < tab; lgn++)
 result = lgn * col;
 result2 = result % 10;
 result1 = result / 10;
-if (lgn < tab)
+if (lgn == 0)
+{
+_putchar(result2 + '0');
+}
+else
 {
 if (result1 > 0)
 {
