@@ -2,7 +2,7 @@
 /**
  * print_to_98  - Entry point
  * void - void
- * @n: variable de type integer
+ * @n: 
  * Description : print 9 times table, starting with 0
  * Return: Alway 0 (Success)
  */
