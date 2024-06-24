@@ -7,13 +7,9 @@
  */
 int _isdigit(int c)
 {
-for (; c >= 58;)
-{
-return (0);
-}
-for (; c >= 0;)
-{
+if (c >= '0' && c <= '9')
 return (1);
-}
+else
+return (0);
 return (0);
 }
