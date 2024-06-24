@@ -7,7 +7,7 @@
  */
 int _isdigit(int c)
 {
-for (; c >= 60;)
+for (; c >= 58;)
 {
 return (0);
 }
