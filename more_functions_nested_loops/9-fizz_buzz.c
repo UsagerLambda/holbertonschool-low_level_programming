@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-  int num, num3, num5, num15;
+int num, num3, num5, num15;
 for (num = 1; num <= 100; num++)
 {
 num3 = num % 3;
