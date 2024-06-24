@@ -23,5 +23,6 @@ printf(" %d", num);
 else
 printf("%d", num);
 }
+putchar('\n');
 return (0);
 }
