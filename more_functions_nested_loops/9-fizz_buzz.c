@@ -12,11 +12,13 @@ for (num = 1; num <= 100; num++)
 num3 = num % 3;
 num5 = num % 5;
 if (num3 == 0)
-printf("Fizz ");
+printf(" Fizz");
 else if (num5 == 0)
-printf("Buzz ");
+printf(" Buzz");
+else if (num != 1 && num != 100)
+printf(" %d", num);
 else
-printf("%d ", num);
+printf("%d", num);
 }
 return (0);
 }
