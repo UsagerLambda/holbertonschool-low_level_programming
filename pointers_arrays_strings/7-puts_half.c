@@ -13,7 +13,7 @@ while (str[count])
 count++;
 }
 i = count / 2;
-for (; i < count- 1; i++)
+for (; i < count - 1; i++)
 {
 _putchar(str[i]);
 }
