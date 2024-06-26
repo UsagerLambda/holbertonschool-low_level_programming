@@ -13,9 +13,12 @@ while (str[count])
 count++;
 }
 i = count / 2;
+if (count - 1 /2)
+{
 for (; i < count; i++)
 {
 _putchar(str[i]);
+}
 }
 _putchar('\n');
 }
