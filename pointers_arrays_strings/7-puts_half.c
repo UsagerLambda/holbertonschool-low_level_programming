@@ -13,7 +13,7 @@ while (str[count])
 count++;
 }
 i = count / 2;
-if (count - 1 /2)
+if (count % 2 == 0)
 {
 for (; i < count; i++)
 {
