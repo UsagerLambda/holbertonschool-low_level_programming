@@ -20,5 +20,13 @@ for (; i < count; i++)
 _putchar(str[i]);
 }
 }
+else
+{
+for (; i < count + 1; i++)
+{
+_putchar(str[i]);
+}
+}
 _putchar('\n');
 }
+
