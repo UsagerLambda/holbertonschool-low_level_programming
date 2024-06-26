@@ -22,7 +22,7 @@ _putchar(str[i]);
 }
 else
 {
-for (; i < count + 1; i++)
+for (; i < count - 1; i++)
 {
 _putchar(str[i]);
 }
