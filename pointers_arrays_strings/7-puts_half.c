@@ -22,9 +22,12 @@ _putchar(str[i]);
 }
 else
 {
+i = (count + 1) / 2;
+{
 for (; i < count; i++)
 {
 _putchar(str[i]);
+}
 }
 }
 _putchar('\n');
