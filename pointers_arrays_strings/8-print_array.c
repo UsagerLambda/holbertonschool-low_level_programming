@@ -1,8 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * puts_half - Entry point
- * @str: tableau
+ * print_array - Entry point
+ * @a: tableau
+ * @n: tableau
  * Description : print string starting from half of tab
  * Return: Alway 0 (Success)
  */
@@ -16,7 +17,7 @@ if (count == n - 1)
 printf("%d", a[count]);
 count++;
 }
-else 
+else
 {
 printf("%d, ", a[count]);
 count++;
