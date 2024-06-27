@@ -21,5 +21,5 @@ else if (j)
 break;
 i++;
 }
-return (num * sign);
+return (num *sign);
 }
