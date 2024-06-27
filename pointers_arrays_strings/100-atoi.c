@@ -8,14 +8,14 @@
  */
 int _atoi(char *s)
 {
-  int count = 0;
-while (s[count])
-{
-  if (s[count] == '+' || s[count] == '-')
-      printf("%c", s[count]);
-  else if (s[count] >= '0' && s[count] <= '9')
-    printf("%c", s[count]);
-  count++;
- }
- return (0);
+  int i = 0, num = 0;
+  while (s[i])
+    {
+      if (s[i] == '+' || s[i] == '-')
+	{}
+      else if (s[i] >= '0' && s[i] <= '9')
+	num = num * 10 + (s[i] - '0');
+      i++;
+    }
+  return (num);
 }
