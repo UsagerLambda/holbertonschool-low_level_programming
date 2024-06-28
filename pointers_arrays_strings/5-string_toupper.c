@@ -1,19 +1,19 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _strncat - Entry point
- * @dest: tableau destination
- * @src: tableau source
- * @n: max number of character
- * Description : do stuff
+ * string_toupper - Entry point
+ * @t: tableau destination
+ * Description : convert lower case to upper
  * Return: Alway 0 (Success)
  */
-char *string_toupper(char *)
+char *string_toupper(char *t)
 {
-  int i = 0;
-  while (*[i])
-    for (; *[i] > *['A'] && *[i] < *['Z']; i++)
-      {
-      }
-      return (0);
+int i = 0;
+while (t[i] != '\0')
+{
+if (t[i] >= 'a' && t[i] <= 'z')
+t[i] = t[i] - 32;
+i++;
+}
+return (t);
 }
