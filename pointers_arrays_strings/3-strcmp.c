@@ -15,9 +15,8 @@ if (*s1 != *s2)
 {
 return (*s1 - *s2);
 }
-else
+else if (*s1 == *s2)
 {
-return (0);
 }
 }
 return (0);
