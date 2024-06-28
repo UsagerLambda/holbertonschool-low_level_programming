@@ -1,12 +1,23 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _strncat - Entry point
- * @dest: tableau destination
- * @src: tableau source
+ * reverse_array - Entry point
+ * @a: tableau destination
  * @n: max number of character
- * Description : do stuff
+ * Description : reverse array of int
  * Return: Alway 0 (Success)
  */
 void reverse_array(int *a, int n)
-  
+{
+  int start = 0;
+  int end = n - 1;
+  int temp;
+  while (start < end)
+    {
+      temp = a[start];
+      a[start] = a[end];
+      a[end] = temp;
+      start++;
+      end--;
+    }
+}
