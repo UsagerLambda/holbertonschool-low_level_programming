@@ -17,7 +17,7 @@ leet['t'] = leet['T'] = '7';
 leet['l'] = leet['L'] = '1';
 while (t[i])
 {
-if (leet[(unsigned char)t[i]])
+if (leet[(unsigned char)t[i]] != 0)
 {
 t[i] = leet[(unsigned char)t[i]];
 }
