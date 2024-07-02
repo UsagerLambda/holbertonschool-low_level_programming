@@ -2,25 +2,26 @@
 #include <stdio.h>
 /**
  * *_strstr - Entry point
- * @needle: string
- * @haystack: string 2
+ * @needle: string 2
+ * @haystack: string 1
  * Description : find the occurence between the 2 strings
  * Return: Alway 0 (Success)
  */
 char *_strstr(char *haystack, char *needle)
 {
-while (*needle)
+if (*needle == '\0')
+return (haystack);
+while (*haystack)
 {
-char *a = haystack;
-while (*a)
+char *a = haystack, *b = needle;
+while (*a && *b && *a == *b)
 {
-if (*needle == *a)
-{
-return (needle);
-}
 a++;
+b++;
 }
-needle++;
+if (*b == '\0')
+return (haystack);
+haystack++;
 }
 return (NULL);
 }
