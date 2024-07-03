@@ -1,16 +1,30 @@
 #include "main.h"
 /**
- * factorial - Entry point
- * @n: integer
- * Description : return factorial of the n integer
+ * increment - _sqrt_recurssion - fonction to increment i
+ * @n: nombre cible
+ * @i: integer pour calculer la racine
+ * Description : return the natural square of n
+ * Return: Always 0.
+ */
+int increment(int n, int i)
+{
+if (i * i > n)
+return (-1);
+else if (i * i == n)
+return (i);
+else
+return (increment(n, i + 1));
+}
+
+/**
+ * _sqrt_recursion - Entry point
+ * @n: nombre cible
+ * Description : return the natural square of n
  * Return: Always 0.
  */
 int _sqrt_recursion(int n)
 {
-int i = 0, o = 0; 
-if (o < n)
+if (n < 0)
 return (-1);
-if (o == n)
-return (o);
-return (n * _sqrt_recursion(o= i * i));
+return (increment(n, 0));
 }
