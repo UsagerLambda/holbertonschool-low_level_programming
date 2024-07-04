@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  * @argc: compte le nombre argument
- * @argv: 
+ * @argv: recupere les arguments
  * Description : print its own name
  * Return: Always 0.
  */
@@ -12,7 +12,6 @@ int i = 0;
 for (i = 0; i < argc; i++)
 {
 printf("%s\n", argv[i]);
-i++;
 }
 return (0);
 }
