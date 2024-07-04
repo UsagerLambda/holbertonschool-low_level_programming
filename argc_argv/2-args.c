@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  * @argc: args count
- * @argv: unused
+ * @argv: argument to print
  * Description : print each argument follow by a new line
  * Return: Always 0.
  */
