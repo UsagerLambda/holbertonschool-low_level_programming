@@ -12,9 +12,9 @@ int main(int argc, char *argv[])
 int number1 = 0;
 int number2 = 0;
 int result = 0;
-if (argc != 3)
+if (argc == 1)
 {
-printf("Error\n");
+printf("0\n");
 return (1);
 }
 number1 = atoi(argv[1]);
