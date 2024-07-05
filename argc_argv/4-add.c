@@ -2,9 +2,9 @@
 #include <stdlib.h>
 /**
  * main - Entry point
- * @argc: args count (3 max, ./mul number1 number2)
+ * @argc: args count
  * @argv: arguments
- * Description : multiply argv[1] with argv[2]
+ * Description : add argv[1] with argv[2], argv[3], argv[4], argv[5]
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
