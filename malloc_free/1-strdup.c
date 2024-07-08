@@ -1,7 +1,7 @@
 #include <stdlib.h>
 /**
  * _strdup - Entry point
- * @str: string to copy 
+ * @str: string to copy
  * Description : return a pointer that contain a copy of str
  * Return: Always 0.
  */
