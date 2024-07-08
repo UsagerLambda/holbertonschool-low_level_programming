@@ -1,6 +1,6 @@
 #include <stdlib.h>
 /**
- * create_array - Entry point
+ * _strdup - Entry point
  * @str: string to copy 
  * Description : return a pointer that contain a copy of str
  * Return: Always 0.
@@ -13,11 +13,11 @@ if (str == NULL)
 return (NULL);
 while (str[i] != '\0')
 i++;
-array = malloc(sizeof(str) * i);
+array = malloc(sizeof(str) * (i + 1));
 if (array == NULL)
 return (NULL);
 i = 0;
-while (str[i] != '\0')
+while (str[i] != ('\0' + 1))
 {
 array[i] = str[i];
 i++;
