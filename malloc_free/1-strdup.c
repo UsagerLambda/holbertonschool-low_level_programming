@@ -13,7 +13,7 @@ if (str == NULL)
 return (NULL);
 while (str[i] != '\0')
 i++;
-array = malloc(sizeof(char) * i + 1);
+array = malloc(sizeof(char) * (i + 1));
 if (array == NULL)
 return (NULL);
 i = 0;
