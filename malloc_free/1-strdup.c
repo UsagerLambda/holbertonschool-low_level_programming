@@ -17,10 +17,11 @@ array = malloc(sizeof(str) * (i + 1));
 if (array == NULL)
 return (NULL);
 i = 0;
-while (str[i] != ('\0' + 1))
+while (str[i] != '\0')
 {
 array[i] = str[i];
 i++;
 }
+array[i] = '\0';
 return (array);
 }
