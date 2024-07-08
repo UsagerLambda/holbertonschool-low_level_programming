@@ -22,6 +22,6 @@ while (str[i] != '\0')
 array[i] = str[i];
 i++;
 }
-array[i] = '\0';
+array[i + 1] = '\0';
 return (array);
 }
