@@ -2,7 +2,7 @@
 /**
  * malloc_checked - Entry point
  * @b: value
- * Description : create a array of chars
+ * Description : allocates memory
  * Return: Always 0.
  */
 void *malloc_checked(unsigned int b)
