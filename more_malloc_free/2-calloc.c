@@ -8,13 +8,17 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+unsigned int total, i;
+unsigned char *byteP;
 void *array;
 if (nmemb == 0 || size == 0)
 return (NULL);
-array = malloc(0);
-if (array != NULL)
-array = malloc(sizeof(size) * nmemb);
+total = nmemb * size;
+array = malloc(total);
 if (array == NULL)
 return (NULL);
+byteP = (unsigned char *)array;
+for (i = 0; i < total; i++)
+byteP[i] = 0;
 return (array);
 }
