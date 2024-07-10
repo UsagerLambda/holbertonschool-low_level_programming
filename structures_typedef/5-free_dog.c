@@ -3,9 +3,7 @@
 #include "dog.h"
 /**
  * free_dog - Entry point
- * @d: Pointer to the `dog` structure
- * @dog_t: standby
- * Description: print infos
+ * @d: Pointer to the dog to be freed
  */
 void free_dog(dog_t *d)
 {
