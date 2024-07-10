@@ -22,7 +22,7 @@ array[h] = malloc(sizeof(int) * width);
 if (array[h] == NULL)
 {
 w = 0;
-if (w < h)
+while (w < h)
 {
 free(array[w]);
 w++;
