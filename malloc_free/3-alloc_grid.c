@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "main.h"
 /**
  * alloc_grid - Entry point
  * @height: number of lines
