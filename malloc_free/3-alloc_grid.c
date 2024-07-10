@@ -12,7 +12,7 @@ int **array;
 int h, w;
 if (width <= 0 || height <= 0)
 return (NULL);
-array = malloc(sizeof(int *) * height);
+array = (int **)malloc(sizeof(int *) * height);
 if (array == NULL)
 return (NULL);
 for (h = 0; h < height; h++)
