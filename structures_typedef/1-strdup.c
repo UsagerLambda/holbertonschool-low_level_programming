@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "dog.h"
 /**
  * _strdup - Entry point
  * @str: string to copy
