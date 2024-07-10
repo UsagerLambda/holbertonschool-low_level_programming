@@ -26,7 +26,8 @@ if (w < h)
 free(array[w]);
 w++;
 }
-free(h)
+free(array);
+return (NULL);
 }
 for (w = 0; w < width; w++)
 array[h][w] = 0;
