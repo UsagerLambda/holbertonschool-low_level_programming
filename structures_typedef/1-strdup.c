@@ -5,7 +5,7 @@
  * Description : return a pointer that contain a copy of str
  * Return: Always 0.
  */
-char *_strdup(const char *str)
+char *_strdup(char *str)
 {
 char *array;
 int i = 0;
