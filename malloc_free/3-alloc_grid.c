@@ -18,6 +18,16 @@ return (NULL);
 for (h = 0; h < height; h++)
 {
 array[h] = malloc(sizeof(int) * width);
+if (array[h] == NULL)
+{
+w = 0;
+if (w < h)
+{
+free(array[w]);
+w++;
+}
+free(h)
+}
 for (w = 0; w < width; w++)
 array[h][w] = 0;
 }
