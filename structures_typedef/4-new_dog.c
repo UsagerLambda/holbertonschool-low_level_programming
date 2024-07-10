@@ -2,13 +2,33 @@
 #include <stdlib.h>
 #include "dog.h"
 /**
- * print_dog - Entry point
+ * new_dog - Entry point
  * @d: Pointer to the `dog` structure
+ * @name:
+ * @age:
+ * @owner:
  * Description: print infos
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t *new_dog_t->name = *name;
-dog_t *new_dog_t->age = age;
-dog_t *new_dog_t->owner = *owner;
+    if (name == NULL || age == 0 || owner == NULL)
+    return (NULL);
+    dog_t *dog;
+
+    dog = malloc(sizeof(dog_t));
+    if (dog == NULL)
+    return (NULL);
+    dog->name = _strdup(name);
+    if (dog->name == NULL)
+    {
+    free(dog);
+    return (NULL);
+}
+    dog->owner = _strdup(owner);
+    {
+      free(dog->name);
+    free(dog);
+    return (NULL);
+}
+    return (dog);
 }
