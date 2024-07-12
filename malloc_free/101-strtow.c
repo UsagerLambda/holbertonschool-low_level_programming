@@ -12,13 +12,13 @@ int word_count(char *str)
 
 	while (*str) /** parcourt la string */
 {	/** verif si pas sur un espace ou déja sur un mot */
-	if (*str != ' ' && !in_word)
+	if (*str != ' ' && !in_word) /** et si in_word == 0 */
 {
 	in_word = 1; /** comme dans un mot initilise in_word à 1 */
 	count++;  /** + 1 dans le compteur de mot */
 }	/** si on est sur un espace et si on était sur un mot */
-	else if (*str == ' ' && in_word)
-	in_word = 0; /** hors du mot donc 0 */
+	else if (*str == ' ' && in_word) /** et si in_word == 1 */
+	in_word = 0; /** hors du mot donc reset à 0 */
 	str++; /** caractère suivant */
 }
 	return (count); /** retourne le nombre de mots trouvés */
