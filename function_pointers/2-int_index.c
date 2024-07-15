@@ -9,21 +9,19 @@
 int int_index(int *array, int size, int (*cmp)(int))
 {
 int i;
-
-if (array && size && cmp)
-/** Vérifie que array, size et la fonction cmp ne sont pas nuls */
-{
-	if (size <= 0 || *array) /** vérifie si size est <= à 0 ou array == NULL */
+/** Vérifie que array, size est > 0 et que cmp n'est pas NULL */
+if ((array && cmp == NULL) || size <= 0)
 	return (-1); /** si oui return -1 */
-	for (i = 0; i < size; i++) /** parcours le tableau*/
+
+for (i = 0; i < size; i++) /** parcours le tableau*/
 {
 	if (cmp(array[i]) != 0) /** si cmp != de 0 retourne i */
 	return (i);
 }
-}
 return (-1); /**si la boucle se termine sans trouver d'éléments */
 /** correspondant alors retourne -1 */
 }
+
 
 /** La boucle vérifie si cmp[array[i] n'est pas égal à 0] */
 /** donc : is_98(array[i]) vérifie si array[i] est strictement égal à 98 */
