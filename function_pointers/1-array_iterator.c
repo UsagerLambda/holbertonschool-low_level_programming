@@ -17,5 +17,7 @@ if (array && size > 0 && action)
 {
 	for (i = 0; i < size; i++) /** parcours le tableau*/
 	action(array[i]); /** action devient soit print_elem soit print_elem_hex */
+	/** après avoir print les 5 nombre du tableau */
+	/** print les 5 nombres du tableau en hexadécimal */
 }
 }
