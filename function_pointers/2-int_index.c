@@ -21,7 +21,8 @@ if (array && size && cmp)
 	return (i);
 }
 }
-return (-1);
+return (-1); /** si la boucle se termine sans trouver d'éléments correspondant*/
+/** retourne -1 */
 }
 
 /** La boucle vérifie si cmp[array[i] n'est pas égal à 0] */
