@@ -2,8 +2,8 @@
 /**
  * print_name - prints a name as is
  * @name: name of the person
- * @f: Standby 1
- * Return: Nothing.
+ * @f: pointeur vers une fonction
+ * Return: pas de return prototype void
  */
 void print_name(char *name, void (*f)(char *))
 {
