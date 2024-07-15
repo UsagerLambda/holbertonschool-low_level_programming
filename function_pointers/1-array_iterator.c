@@ -12,7 +12,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 unsigned int i;
 
-if (array && size > 0 && action)
+if (array && size && action)
 /** Vérifie que array, size et la fonction action ne sont pas nuls */
 {
 	for (i = 0; i < size; i++) /** parcours le tableau*/
