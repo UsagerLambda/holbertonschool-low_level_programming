@@ -6,7 +6,13 @@
  * Return: pas de return prototype void
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
+/** pointeur vers une fonction qui prend un entier (int) */
+/** en argument et ne retourne rien (void) */
 {
-if (array && size)
-size(array);
+if (array && size > 0 && action)
+/** Vérifie que array, size et la fonction action ne sont pas nuls */
+{
+    for (size_t i = 0; i < size; i++)
+    action(array[i]);
+}
 }
