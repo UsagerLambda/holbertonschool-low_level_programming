@@ -10,7 +10,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 int i;
 /** Vérifie que array et cmp sont NULL et que size et <= 0 */
-if (size <= 0)
+if (array == NULL || cmp == NULL || size <= 0)
 	return (-1); /** si oui return -1 */
 
 for (i = 0; i < size; i++) /** parcours le tableau*/
