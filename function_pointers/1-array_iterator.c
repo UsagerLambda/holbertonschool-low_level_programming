@@ -13,6 +13,8 @@ if (array && size > 0 && action)
 /** Vérifie que array, size et la fonction action ne sont pas nuls */
 {
     unsigned int i;
+    if (size == 0)
+    return;
     for (i = 0; i < size; i++) /** parcours le tableau*/
     action(array[i]);
 }
