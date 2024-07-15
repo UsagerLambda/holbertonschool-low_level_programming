@@ -7,9 +7,8 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (name == 0 && f == 0)
+	if (name == 0 && f == 0) /** si name et f ne sont NULL*/
 	return;
-	else /** si name et f ne sont pas NULL*/
 	f(name); /** f devient print_name_as_is ou print_name_uppercasse */
 	/** et name devient Bob ou Bob Dylan*/
 	/** dans main ont appelle print_name en donnant name = Bob */
