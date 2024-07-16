@@ -22,20 +22,22 @@ if (argc != 4)
 
 a = atoi(argv[1]); /** assign et convert en int la valeur de argv[1] à 'a' */
 b = atoi(argv[3]); /** assign et convert en int la valeur de argv[3] à 'b' */
-/** fonction get_op_func est appelée avec l'opérateur argv[2] */
-operator = get_op_func(argv[2]);
 
-if (argv[2][0] != '1' || argv[2][1] != '\0')
+if (argv[2][1] != '\0')
 {
 	printf("Error\n");
 	exit(99);
 }
+/** fonction get_op_func est appelée avec l'opérateur argv[2] */
+operator = get_op_func(argv[2]);
+
 /** vérifie si operateur est NULL*/
 if (operator == NULL)
 {
 	printf("Error\n");
 	exit(99);
 }
+
 /** vérifie si l'opérateur / ou % se retrouve avec b = 0 */
 if ((*argv[2] == '/' && b == 0) || (*argv[2] == '%' && b == 0))
 {
