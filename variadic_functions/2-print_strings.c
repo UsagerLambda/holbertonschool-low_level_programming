@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_strings - print les entiers de la chaine variadic
+ * print_strings - print les strings de la chaine variadic
  * @separator: chaine de caractère ','
  * @n: valeur du premiers nombre de la liste
  * @...: varadic paramètre
@@ -16,7 +16,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	/** et place le pointeur sur le premier argument après n */
 	for (i = 0; i < n; i++) /** déplace i dans la chaine */
 {
-	printf("%s", va_arg(args, char)); /** print le caractère pointer par i */
+	printf("%s", va_arg(args, char*)); /** print le caractère pointé par i */
 	if (separator != NULL && i < n - 1) /** si séparator n'est pas NULL */
 	/** et i est inférieur à 3 */
 	printf("%s", separator); /** si c'est le cas print separator (',') */
