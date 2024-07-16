@@ -7,9 +7,9 @@
  * @f: The function associated
  */
 typedef struct op
-{
-    char *op; /** Pointeur vers la chaine de caractère représnt 'opérateur */
-    int (*f)(int a, int b); /** Pointeur vers fonction qui prend 2 entiers */
+{	/** Pointeur vers la chaine de caractère représnt 'opérateur */
+	char *op;
+	int (*f)(int a, int b); /** Pointeur vers fonction qui prend 2 entiers */
 	/** et retourne un entier ( *f )*/
 } op_t;
 int (*get_op_func(char *s))(int, int);

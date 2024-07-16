@@ -19,7 +19,8 @@ int i = 0;
 while (ops[i].op && *(ops[i].op) != *s)
 i++; /** Si les conditions sont respectées avancée de 1 dans le tableau */
 if (ops[i].op)
-return (ops[i].f); /** accède à 'f' de la struct op_t située à l'endroit [i] */
+/** Access à 'f' de la struct op_t située à l'endroit [i] */
+return (ops[i].f);
 /** f est un pointeur vers une fonction qui prend 2 entiers */
 return (NULL); /** sinon retourne NULL */
 }
