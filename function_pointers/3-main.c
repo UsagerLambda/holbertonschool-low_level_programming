@@ -19,12 +19,12 @@ if (argc != 4)
 	printf("Error\n");
 	exit(98);
 }
-if (argv[2][1] != '\0')
+
+if (argv[2][0] != '1' || argv[2][1] != '\0')
 {
 	printf("Error\n");
 	exit(99);
 }
-
 a = atoi(argv[1]); /** assign et convert en int la valeur de argv[1] à 'a' */
 b = atoi(argv[3]); /** assign et convert en int la valeur de argv[3] à 'b' */
 /** fonction get_op_func est appelée avec l'opérateur argv[2] */
