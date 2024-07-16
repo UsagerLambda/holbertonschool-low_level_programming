@@ -1,7 +1,8 @@
 #include <stdarg.h>
 /**
- * sum_them_all: additionne tous les nombres
+ * sum_them_all - additionne tous les nombres donnés en arguments
  * @n: valeur du premiers nombre de la liste
+ * @...: varadic paramètre
  * Return: Alway 0 (Success)
  */
 int sum_them_all(const unsigned int n, ...)
@@ -28,4 +29,3 @@ int sum_them_all(const unsigned int n, ...)
 /** car va_arg passe automatiquement à l'args suivant */
 /** va_end fini la gestion de la list d'args */
 /** renvoie sum */
-
