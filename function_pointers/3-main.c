@@ -13,12 +13,21 @@
 /** ex : ./calc 1 + 1 */
 int main(int argc, char *argv[])
 {
-int a, b; /** argv[1] & argv[3] */
+int a, b, i, lenght; /** argv[1] & argv[3] | i & lenght cmp nb c argv[2] */
 int (*operator)(int, int); /** opérateur */
 if (argc != 4)
 {
 	printf("Error\n");
 	exit(98);
+}
+for (i = 0; argv[2][i]; i++)
+{
+	lenght++;
+	if (lenght > 1)
+	{
+	printf("Error\n");
+	exit(98);
+	}
 }
 
 a = atoi(argv[1]); /** assign et convert en int la valeur de argv[1] à 'a' */
