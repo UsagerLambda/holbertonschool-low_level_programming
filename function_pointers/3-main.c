@@ -19,11 +19,6 @@ if (argc != 4)
 	printf("Error\n");
 	exit(98);
 }
-if (argv[2][1] != '\0')
-{
-	printf("Error\n");
-	exit(98);
-}
 
 a = atoi(argv[1]); /** assign et convert en int la valeur de argv[1] à 'a' */
 b = atoi(argv[3]); /** assign et convert en int la valeur de argv[3] à 'b' */
