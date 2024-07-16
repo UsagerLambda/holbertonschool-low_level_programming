@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
 int a, b; /** argv[1] & argv[3] */
 int (*operator)(int, int); /** opérateur */
-if (argc != 4 || argv[2][1] != '\0')
+if ((argc != 4) || (argv[2][1] != '\0'))
 {
 	printf("Error\n");
 	exit(98);
