@@ -1,7 +1,7 @@
 #include <stdarg.h>
 /**
  * sum_them_all: additionne tous les nombres
- * @n: valeur du nombre
+ * @n: valeur du premiers nombre de la liste
  * Return: Alway 0 (Success)
  */
 int sum_them_all(const unsigned int n, ...)
@@ -9,11 +9,12 @@ int sum_them_all(const unsigned int n, ...)
 	va_list args; /** variable de type va_list pour stocker les arg. */
 	unsigned int i; /** initialisation d'un compteur i */
 	int sum = 0; /** initialisation variable sum */
+
 	if (n == 0) /** si n est strictement égal à 0 */
 	return (0); /** retourne 0 */
 	va_start(args, n); /** initialise la list args et pointe le 1 arg sur n */
 	for (i = 0; i < n; i++) /** tant que i < n; i++ */
-	sum = sum + va_arg(args, int); /** récupère l'argument courant de type int */
+	sum = sum + va_arg(args, int); /** récupère l'args actuel de type int */
 	/** et avance le pointeur au prochain argument */
 	va_end(args);
 	return (sum);
