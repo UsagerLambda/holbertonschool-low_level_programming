@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include <stddef.h>
 #include "3-calc.h"
@@ -20,14 +19,10 @@ if (argc != 4)
 	printf("Error\n");
 	exit(98);
 }
-for (i = 0; argv[2][1] != '\0'; i++)
+if (argv[2][1] != '\0')
 {
-	lenght++;
-	if (lenght > 1)
-	{
 	printf("Error\n");
 	exit(98);
-	}
 }
 
 a = atoi(argv[1]); /** assign et convert en int la valeur de argv[1] à 'a' */
