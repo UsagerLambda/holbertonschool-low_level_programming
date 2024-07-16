@@ -1,5 +1,12 @@
 #include "3-calc.h"
 #include <stdlib.h>
+/**
+ * get_op_func - Selectionne la bonne fonction
+ * demandé par l'utilisateur
+ * @s: Opérateur passé en argument au programme
+ * Return: un pointeur vers la fonction qui correspond à l'opérateur
+ * donné en paramètre. Si s ne correspnd pas aux opérateurs = return NULL
+ */
 /** prend un argument char *s (string of chars)*/
 /** retourne un pointeur vers deux entiers*/
 int (*get_op_func(char *s))(int, int)

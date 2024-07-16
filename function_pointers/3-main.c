@@ -5,8 +5,8 @@
 /**
  * main - Entry point
  * @argc: nombre d'arguments
- * @argv: argument
- * Return:
+ * @argv: tableau de chaine de caractère représenant les arguments
+ * Return: 0 si success, sinon une autre valeur en cas d'erreur
  */
 /** vérifie si le nombre d'argc est égal à 4 sinon print Error */
 /** ex : ./calc 1 + 1 */
