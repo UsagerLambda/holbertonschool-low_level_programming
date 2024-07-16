@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
 int a, b; /** argv[1] & argv[3] */
 int (*operator)(int, int); /** opérateur */
-if ((argc != 4) || (argv[2][1] != '\0'))
+if (argc != 4)
 {
 	printf("Error\n");
 	exit(98);
@@ -26,7 +26,7 @@ b = atoi(argv[3]); /** assign et convert en int la valeur de argv[3] à 'b' */
 operator = get_op_func(argv[2]);
 
 /** vérifie si operateur est NULL*/
-if (operator == NULL)
+if ((operator == NULL) || (argv[2][1] != '\0'))
 {
 	printf("Error\n");
 	exit(99);
