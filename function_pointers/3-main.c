@@ -21,12 +21,6 @@ if (argc != 4)
 	exit(98);
 }
 
-if (strlen(argv[2]) > 1)
-{
-	printf("Error\n");
-	exit(98);
-}
-
 a = atoi(argv[1]); /** assign et convert en int la valeur de argv[1] à 'a' */
 b = atoi(argv[3]); /** assign et convert en int la valeur de argv[3] à 'b' */
 /** fonction get_op_func est appelée avec l'opérateur argv[2] */
