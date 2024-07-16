@@ -22,7 +22,7 @@ if (argc != 4)
 if (argv[2][1] != '\0')
 {
 	printf("Error\n");
-	exit(98);
+	exit(99);
 }
 
 a = atoi(argv[1]); /** assign et convert en int la valeur de argv[1] à 'a' */
