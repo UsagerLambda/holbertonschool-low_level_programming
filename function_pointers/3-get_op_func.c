@@ -21,7 +21,7 @@ op_t ops[] = {
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-int i = 0;
+int i;
 /** Vérifie si ops[i].op n'est pas NULL */
 /** Vérifie si l'élément pointé est le même que la chaine 's' */
 while (ops[i].op && *(ops[i].op) != *s)
