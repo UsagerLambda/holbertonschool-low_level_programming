@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <stddef.h>
 #include "3-calc.h"
@@ -14,7 +15,7 @@ int main(int argc, char *argv[])
 {
 int a, b; /** argv[1] & argv[3] */
 int (*operator)(int, int); /** opérateur */
-if (argc != 4)
+if (argc != 4 || strlen(argv[2]) > 1)
 {
 	printf("Error\n");
 	exit(98);
