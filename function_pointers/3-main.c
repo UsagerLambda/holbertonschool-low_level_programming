@@ -20,9 +20,9 @@ if (argc != 4)
 	exit(98);
 }
 
-a = atoi(argv[1]); /** assigne la valeur de argv[1] à 'a' */
-b = atoi(argv[3]); /** assigne la valeur de argv[3] à 'b' */
-
+a = atoi(argv[1]); /** assign et convert en int la valeur de argv[1] à 'a' */
+b = atoi(argv[3]); /** assign et convert en int la valeur de argv[3] à 'b' */
+/** fonction get_op_func est appelée avec l'opérateur argv[2] */
 operator = get_op_func(argv[2]);
 /** vérifie si operateur est NULL*/
 if (operator == NULL)
@@ -39,3 +39,24 @@ if ((*argv[2] == '/' && b == 0) || (*argv[2] == '%' && b == 0))
 printf("%d\n", operator(a, b));
 return (0);
 }
+
+/**
+ * En prenant pour input 3 + 8 :
+ * argv[0] = ./calc       | argv[1] = 3   | argv[2] = + | argv[3] = 8
+ * Ligne 17 vérifie si le nombre d'arguments est respecté. Dans ce cas, oui.
+ * Ensuite, convertit argv[1] & argv[3] en entiers puis les assigne à a & b.
+ * À la ligne 26, fonction get_op_func est appelée avec l'opérateur argv[2].
+ * Tableau ops est parcouru pour trouver fonction associée à l'opérateur '+'
+ * (car argv[2] est '+'). On compare argv[2] avec chaque élément du tableau
+ * jusqu'à trouver le même opérateur.
+ * Pour '+', on trouve op_add. On assigne op_add à la variable operator.
+ * Si operator = NULL (donc introuvable), affiche "Error" puis exit avec 99.
+ * Ce n'est pas le cas (car operator = op_add), donc on continue.
+ * À la ligne 34, on vérifie si operator est '/' ou '%' et si b = 0.
+ * Si c'est le cas, on affiche "Error" puis on sort avec le code 100.
+ * À la ligne 39, on affiche le résultat de la fonction operator = op_add,
+ * donc op_add ayant a et b comme arguments (a = 3 & b = 8).
+ * La fonction op_add renvoie le résultat de a + b.
+ * Donc on affiche le résultat de a + b = 11.
+ * Résultat final : 11
+ */
