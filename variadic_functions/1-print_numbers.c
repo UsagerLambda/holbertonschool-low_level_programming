@@ -1,8 +1,8 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_number - additionne tous les nombres donnés en arguments
- * @separator: chaine de caractère
+ * print_numbers - print les entiers de la chaine variadic
+ * @separator: chaine de caractère ','
  * @n: valeur du premiers nombre de la liste
  * @...: varadic paramètre
  * Return: Alway 0 (Success)
@@ -11,7 +11,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i; /** variable pour parcourir n*/
 	va_list args; /** variable args qui va stocker la liste des arguments. */
-	
+
 	va_start(args, n); /** initialise la liste d'arguments args */
 	/** et place le pointeur sur le premier argument après n */
 	for (i = 0; i < n; i++) /** déplace i dans la chaine */
