@@ -20,7 +20,7 @@ if (argc != 4)
 	printf("Error\n");
 	exit(98);
 }
-for (i = 0; argv[2][i]; i++)
+for (i = 0; argv[2][1] != '\0'; i++)
 {
 	lenght++;
 	if (lenght > 1)
