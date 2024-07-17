@@ -10,7 +10,7 @@ void print_all(const char * const format, ...)
 {
 	va_list args; /** création de ma liste */
 	const char *str; /** pointeur vers va_arg(args char*) */
-	char *separator = ", "; /** chaine ", " */
+	char *separator = ""; /** chaine ", " */
 	int i = 0; /** i pour parcourir format */
 
 	va_start(args, format); /** début de ma liste */
@@ -35,6 +35,7 @@ void print_all(const char * const format, ...)
 	printf("%s%s", separator, str);
 	break;
 }
+	separator = ", ";
 	i++;
 }
 	va_end(args);
