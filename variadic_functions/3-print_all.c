@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 	va_start(args, format); /** début de ma liste */
 	while (format && format[i]) /** tant que format && format[i] != '\0' */
 {
-	/** si format[i] est égal à c, i ,f, s*/
+	/** test l'égalité de case dans dans format[i] */
 	switch (format[i])
 {
 	case 'c': /** si char*/
@@ -31,9 +31,12 @@ void print_all(const char * const format, ...)
 	case 's': /** si chaine de caractère */
 	str = va_arg(args, char*);
 	if (str == NULL)
+	{
 	str = "(nil)";
-	printf("%s%s", separator, str);
+	printf("%s", str);
 	break;
+	}
+	printf("%s%s", separator, str);
 }
 	separator = ", ";
 	i++;
