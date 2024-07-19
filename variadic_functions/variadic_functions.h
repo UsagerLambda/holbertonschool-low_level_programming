@@ -11,11 +11,11 @@
  * structures est parcouru dans la fonction print_all pour call la fonction
  * appropriée selon le symbole rencontré dans la chaîne de format.
  */
+/** l18 pointeur vers une chaîne de caractères qui représente un symbole */
+/** l19 pointeur vers une fonction qui prend une va_list comme argument */
 typedef struct printer
 {
-/** pointeur vers une chaîne de caractères qui représente un symbole */
 	char *symbol;
-/** pointeur vers une fonction qui prend une va_list comme argument */
 	void (*print)(va_list args);
 } printer_t;
 int sum_them_all(const unsigned int n, ...);
