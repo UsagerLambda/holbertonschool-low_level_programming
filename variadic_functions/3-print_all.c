@@ -1,7 +1,4 @@
-#include <stdarg.h>
-#include <stdio.h>
 #include "variadic_functions.h"
-
 /**
  * print_char - Imprime un caractère
  * @args: Liste d'arguments contenant le caractère à imprimer
@@ -74,12 +71,12 @@ void print_all(const char * const format, ...)
 		while (printers[j].symbol != NULL)
 			{
 			if (format[i] == *(printers[j].symbol))
-				{
-				printf("%s", sep);/** Imprime le séparateur */
-				printers[j].print(args);/** call la fonction d'impression correspondante. */
-				sep = ", ";/** set sep à ", " après l'impression du 1er symbole */
-				break;
-				}
+			{
+			printf("%s", sep);/** Imprime le séparateur */
+			printers[j].print(args);/** call la func print corresp. */
+			sep = ", ";/** set sep à ", " après l'impression du 1er symbole */
+			break;
+			}
 			j++; /** avance dans les symboles */
 			}
 	i++; /** avance dans format */
