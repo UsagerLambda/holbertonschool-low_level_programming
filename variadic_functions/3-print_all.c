@@ -68,22 +68,22 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 
 	while (format && format[i]) /** 1er boucle pour parcourir le format. */
-{
-	j = 0; /** set j à 0 */
-	/** 2eme boucle pour trouver le bon symbole */
-	while (printers[j].symbol != NULL)
-{
-	if (format[i] == *(printers[j].symbol))
-{
-	printf("%s", sep); /** Imprime le séparateur */
-	printers[j].print(args); /** call la fonction d'impression correspondante. */
-	sep = ", "; /** set sep à ", " après l'impression du 1er symbole */
-	break;
-}
-	j++; /** avance dans les symboles */
-	}
+	{
+		j = 0; /** set j à 0 */
+		/** 2eme boucle pour trouver le bon symbole */
+		while (printers[j].symbol != NULL)
+			{
+			if (format[i] == *(printers[j].symbol))
+				{
+				printf("%s", sep);/** Imprime le séparateur */
+				printers[j].print(args);/** call la fonction d'impression correspondante. */
+				sep = ", ";/** set sep à ", " après l'impression du 1er symbole */
+				break;
+				}
+			j++; /** avance dans les symboles */
+			}
 	i++; /** avance dans format */
-}
+	}
 	va_end(args); /** Termine l'utilisation de la liste d'arguments variables. */
 	printf("\n"); /** saute une ligne à la fin */
 }
