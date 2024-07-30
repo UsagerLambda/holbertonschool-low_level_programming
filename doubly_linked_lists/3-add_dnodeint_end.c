@@ -1,9 +1,9 @@
 #include "lists.h"
 /**
- * add_dnodeint_end - Entry point
- * @head: NULL
- * @n: NULL
- * Return: NULL
+ * add_dnodeint_end - add new node at the end of the double list
+ * @head: Double pointer to the head of the list
+ * @n: Value to store in the new node
+ * Return: Adress of the new element
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
