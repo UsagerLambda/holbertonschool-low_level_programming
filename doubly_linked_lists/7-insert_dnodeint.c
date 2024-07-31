@@ -49,3 +49,26 @@ else /* (14) */
 	free(insert_node); /* (19) */
 	return (NULL); /* (20) */
 }
+
+/*1. Alloue de la mémoire à insert_node équivalente à struct dlistint_t */
+/*2. Vérifie si l'allocation n'as pas échouée si oui free et return NULL */
+/*3. Définie les champs de insert_node */
+/*4. Vérifie si index != à 5 si c'est le cas return NULL */
+/*5. Tant que current n'est pas NULL && index inférieur à idx */
+/*6. previous prend l'adresse de current */
+/*7. current passe au node suivant */
+/*8. et ont incrémente index */
+
+/*9. Si index et idx sont égaux */
+/*10. Définie le prochain node comme étant le node actuel */
+/*11. Si previous n'est pas NULL (le node actuel n'est pas le premier) */
+/*12. met à jour le pointeur next de previous vers le insert_node */
+/*13. met à jour le pointeur prev de insert_node vers le node previous */
+/*14. Si index != idx */
+/*15. Met à jour le pointeur head vers insert_node */
+/*16. Vérifie si current n'est pas NULL */
+/*17. Si oui, met à jour previous pour qu'il pointe vers insert_node */
+/*18. Retourne insert_node */
+/*19. si insert_node ne peut pas être insérer */
+/* libère la mémoire allouée pour insert_node */
+/*20. retourne NULL si l'insertion à échouée */
