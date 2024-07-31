@@ -28,7 +28,7 @@ return (add_dnodeint_end(h, n)); /* add un node avec les args h et n */
 new_node = malloc(sizeof(dlistint_t));
 if (new_node == NULL)
 return (NULL);
-new_node = n; /* n = 4096 */
+new_node->n = n; /* n = 4096 */
 new_node->next = temp->next; /* pareil avec next */
 new_node->prev = temp; /* assigne l'adresse de temp à new_node->prev */
 if (temp->next != NULL) /* vérif si temp->next est le last node de la liste */
