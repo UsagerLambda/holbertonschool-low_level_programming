@@ -8,7 +8,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int fd; /* descripteur de fichier (file descriptor) */
+int fd = 0; /* descripteur de fichier (file descriptor) */
 char *buffer; /* buffer de type char pour stocker les char lues du fichier */
 /* variable qui compte le nombre d'octets lus et écrit */
 ssize_t bytes_read = 0, bytes_written = 0;
@@ -20,7 +20,7 @@ if (fd == -1) /*si l'ouverture échoue */
 return (0);
 
 buffer = malloc(letters); /* alloue mémoire de taille letters à buffer */
-if (buffer == NULL)
+if (buffer == NULL) /* si malloc échoue */
 {
 	close(fd);
 	return (0);
@@ -34,7 +34,7 @@ if (bytes_read == -1)
 	return (0);
 }
 /* écrit le contenue de buffer dans terminal jusqu'à "bytes_read" octets */
-bytes_written = (STDOUT_FILENO, buffer, bytes_read);
+bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
 if (bytes_written == -1 || bytes_written != bytes_read)
 {
 	free(buffer);
