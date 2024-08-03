@@ -14,6 +14,10 @@ unsigned int bit_diff = 0;
 /* Compare n et m, si les bits diffèrent, le bit résultant est 1 */
 nb_flip = n ^ m;
 
+if (n == ULONG_MAX && m == 0)
+/* renvoie le nombre de bit d'un UL pour un system 32 ou 64 bit */
+	return (sizeof(unsigned long int) * 8);
+
 while (nb_flip != 0)
 {
 	/* vérifie si le bit le plus à droite est 1 */
