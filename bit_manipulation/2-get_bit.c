@@ -9,7 +9,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 char bit;
 
-if (index >= n) /* vérifie si index est hors limite */
+if (index >= sizeof(n) * 8) /* vérifie si index est hors limite */
 return (-1);
 
 n = n >> index; /* décale n vers la droite jusqu'à l'index */
