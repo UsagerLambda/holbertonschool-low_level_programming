@@ -32,6 +32,7 @@ error(98, "Error: Can't read from file %s\n", argv[1]);
 /* ouvre fichier destination ou le crée */
 fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (fd_to == -1)
+close(fd_from);
 error(99, "Error: Can't write to %s\n", argv[2]);
 
 /* lit fd_from jusqu'à qu'il n'y ai plus d'octet à lire */
@@ -39,11 +40,19 @@ while ((read_bytes = read(fd_from, buffer, 1024)) > 0)
 {
 	/* écrit et vérifie si une erreur c'est produite */
 	if (write(fd_to, buffer, read_bytes) != read_bytes)
+		{
+		close(fd_from);
+		close(fd_to);
 		error(99, "Error: Can't write to %s\n", argv[2]);
+		}
 }
 
 if (read_bytes == -1) /* vérif si une erreur de lecture c'est produite */
+{
+close(fd_from);
+close(fd_to);
 error(98, "Error: Can't read from file %s\n", argv[1]);
+}
 
 if (close(fd_from) == -1) /* close source file */
 error(100, "Error: Can't close fd %d\n", argv[1]);
